@@ -1,0 +1,54 @@
+<mat-card>
+  <h1>Your Profile Details</h1>
+
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="container col-md-10 offset-md-5">
+          <img class="profile-image" src="https://st.depositphotos.com/2101611/3925/v/600/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg" alt="">
+
+        </div>
+        <h1 class="text-center">{{pensionerList.name}}</h1>
+
+        <div class="row">
+          <div >
+            <table class="table text-center">
+              <tr>
+                <td>AadharNumber</td>
+                <td>{{pensionerList.aadharNumber}}</td>
+              </tr>
+              <tr>
+                <td>Name</td>
+                <td>{{pensionerList.name}}</td>
+              </tr>
+              <tr>
+                <td>Date Of Birth</td>
+                <td>{{pensionerList.dateOfBirth}}</td>
+              </tr>
+              <tr>
+                <td>Pan Number</td>
+                <td>{{pensionerList.panNumber}}</td>
+              </tr>
+              <tr>
+                <td>Salary</td>
+                <td>{{pensionerList.salary}}</td>
+              </tr>
+              <tr>
+                <td>Allowances</td>
+                <td>{{pensionerList.allowances}}</td>
+              </tr>
+              <tr>
+                <td>Pension Type</td>
+                <td>{{pensionerList.pensionType}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="text-center">
+    <button mat-raised-button color="primary" (click)="goBack()">Return</button>
+    <button mat-raised-button color="accent" (click)="calculatePensioner(pensionerList.aadharNumber)" >Calculate Pension</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,59 @@
+Localhost:
+
+1. Authorization
+  i. http://localhost:8060/api/auth/authenticate​ - POST
+  ii. http://localhost:8060/api/auth/authorize - GET
+2. PensionDetails
+  i. http://localhost:8061/api/details/allDetails​ - GET
+  ii. http://localhost:8061/api/details/pensionerList/{aadharNumber} - POST
+  iii. http://localhost:8061/api/details/pensionerList/{aadharNumber} - DELETE
+3. Pension Process
+  i. http://localhost:8063/api/process/pensionerInput - POST
+  ii. http://localhost:8063/api/process/processPension - POST
+4. Pension Disbursement
+  i. http://localhost:8062/api/disbursement/disbursePension - POST
+5. Pension Portal
+  i.  http://localhost:8070/api/portal/pensionDetail​ - POST
+  ii.  http://localhost:8070/api/portal/processPension​ - POST
+
+AWS:
+
+1. Authorization
+  i. http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/auth/authenticate​ - POST
+  ii. http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/auth/authorize - GET
+2. PensionDetails
+  i. http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/details/allDetails​ - GET
+  ii. http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/details/pensionerList/{aadharNumber} - POST
+  iii. http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/details/pensionerList/{aadharNumber} - DELETE
+3. Pension Process
+  i. http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/process/pensionerInput - POST
+  ii. http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/process/processPension - POST
+4. Pension Disbursement
+  i. http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/disbursement/disbursePension - POST
+5. Pension Portal
+  i.  http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/portal/pensionDetail​ - POST
+  ii.  http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/portal/processPension​ - POST
+
+H2- CONSOLE:
+
+  1. Authorization - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/auth/h2-console
+     jdbc:h2:mem:pension, no password
+  2. PensionDetails - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/details/h2-console
+     jdbc:h2:mem:pensionDetails, password - sa
+  3. Pension Process - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/process/h2-console
+     jdbc:h2:mem:pensionDetails, password - sa
+SWAGGER DOCUMENTATION:
+
+  1. Authorization - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/auth/v3/api-docs
+  2. PensionDetails - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/details/v3/api-docs
+  3. Pension Process - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/process/v3/api-docs
+  4. Pension Disbursement - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/disbursement/v3/api-docs
+  5. Pension Portal - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/portal/v3/api-docs
+
+SWAGGER API:
+
+  1. Authorization - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/auth/swagger-ui.html
+  2. PensionDetails - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/details/swagger-ui.html
+  3. Pension Process - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/process/swagger-ui.html
+  4. Pension Disbursement - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/disbursement/swagger-ui.html
+  5. Pension Portal - http://pms-microservices-lb-1484324810.us-east-1.elb.amazonaws.com/api/portal/swagger-ui.html

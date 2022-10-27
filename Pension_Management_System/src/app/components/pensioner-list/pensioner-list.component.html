@@ -1,0 +1,43 @@
+<div class="container bg" style="background-color: #d0c7ec;">
+<h2 class="text-center">Pensioner List</h2><hr>
+<nav class="navbar"  >
+  <input type="text" class="form-control form-input" name="aadharNumber" [(ngModel)]="aadharNumber" (ngModelChange)="Search()" placeholder="Enter Aadhar Number to Search">
+</nav>
+<div class="container">
+<mat-card>
+<table class="table table-striped" >
+  <thead style="text-align: center;">
+    <tr>
+      <th>Aadhaar No</th>
+      <th>Name</th>
+      <th>DOB</th>
+      <th>Pan No</th>
+      <th>Salary</th>
+      <th>Allowance</th>
+      <th>Pension Type</th>
+      <th>Bank NAme</th>
+      <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody  style="text-align: center;">
+    <tr *ngFor= "let pensioner of pensionerList |  paginate: {itemsPerPage:5,currentPage:p};">
+        <td>{{pensioner.aadharNumber}}</td>
+        <td>{{pensioner.name}}</td>
+        <td>{{pensioner.dateOfBirth}}</td>
+        <td>{{pensioner.panNumber}}</td>
+        <td>{{pensioner.salary}}</td>
+        <td>{{pensioner.allowances}}</td>
+        <td>{{pensioner.pensionType}}</td>
+        <td>{{pensioner.bankName}}</td>
+        <td>
+
+          <button (click)="deletePensioner(pensioner.aadharNumber)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+          <button (click)="pensionerDetails(pensioner.aadharNumber)" class="btn btn-info" style="margin-left: 10px;">View</button>
+        </td>
+    </tr>
+</tbody>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</table>
+</mat-card>
+</div>
+</div>
